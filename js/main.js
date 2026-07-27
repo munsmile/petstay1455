@@ -1,4 +1,4 @@
-// 팻스테이1455 — 공통 스크립트
+// 펫스테이1455 — 공통 스크립트
 
 document.addEventListener("DOMContentLoaded", function () {
   // 모바일 GNB 토글
@@ -45,6 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     revealEls.forEach(function (el) {
       el.classList.add("in");
+    });
+  }
+
+  // 방문자 카운터 (footer의 "Hosted on cafe24" 텍스트를 더블클릭하면 숨겨진 누적 방문 수가 나타남)
+  var counterEl = document.getElementById("visitCounter");
+  var counterTrigger = document.getElementById("secretCounterTrigger");
+  if (counterEl && counterTrigger) {
+    fetch("https://abacus.jasoncameron.dev/hit/petstay1455-gyeongju-pension/site-visits")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        counterEl.textContent = "누적 방문 " + data.value.toLocaleString() + "회";
+      })
+      .catch(function () {
+        counterEl.textContent = "방문자 수를 불러올 수 없습니다";
+      });
+
+    counterTrigger.addEventListener("dblclick", function () {
+      counterEl.classList.toggle("visible");
     });
   }
 });
