@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var mapEl = document.getElementById("naverMap");
   if (mapEl) {
     if (window.naver && window.naver.maps) {
-      var location = new naver.maps.LatLng(35.8192258, 129.1733416);
+      var location = new naver.maps.LatLng(35.8174878, 129.1719039);
       var map = new naver.maps.Map(mapEl, {
         center: location,
-        zoom: 15
+        zoom: 16
       });
       new naver.maps.Marker({
         position: location,
