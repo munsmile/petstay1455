@@ -325,29 +325,6 @@ button{ font-family:inherit; }
 .guide-item p{ font-size: 13px; color: var(--ink-soft); margin:0; }
 @media (max-width: 880px){ .guide-strip{ grid-template-columns: repeat(2,1fr); } }
 
-/* ---------- Room booking cards ---------- */
-.room-cards{ display:grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-@media (max-width: 880px){ .room-cards{ grid-template-columns: 1fr; } }
-.room-card{
-  background: var(--paper);
-  border: 1px solid var(--stone-line);
-  border-radius: var(--radius-l);
-  padding: 30px;
-  box-shadow: var(--shadow-soft);
-  display:flex; flex-direction:column; gap:16px;
-}
-.room-card .tag{
-  align-self:flex-start;
-  font-size: 11.5px; font-weight:700; letter-spacing:.04em;
-  padding: 4px 12px; border-radius:100px;
-  background: var(--terracotta-soft); color: var(--terracotta-dark);
-}
-.room-card h3{ font-size: 22px; }
-.room-card .spec-list{ display:flex; flex-direction:column; gap:8px; margin: 4px 0 6px; }
-.room-card .spec-list li{ font-size: 13.5px; color: var(--ink-soft); display:flex; gap:8px; }
-.room-card .spec-list li b{ color: var(--ink); font-weight:600; min-width: 74px; }
-.room-card .price{ font-size: 20px; font-weight:800; }
-.room-card .price small{ font-size: 12.5px; font-weight:500; color: var(--ink-soft); }
 
 /* ---------- Location / Map embed ---------- */
 .map-embed{
