@@ -394,6 +394,30 @@ button{ font-family:inherit; }
   font-size:14px;
 }
 
+/* ---------- Instagram widget slot ---------- */
+.widget-slot{
+  border: 1px dashed var(--stone-line-strong);
+  border-radius: var(--radius-m);
+  background: var(--stone);
+  padding: 64px 24px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+.widget-slot .icon{ font-size:34px; display:block; margin-bottom:14px; }
+.widget-slot b{ color: var(--ink); }
+.widget-slot .steps{
+  margin: 20px auto 0;
+  max-width: 440px;
+  text-align: left;
+  font-size: 12.5px;
+  display:flex;
+  flex-direction:column;
+  gap: 7px;
+}
+.widget-slot .steps li{ display:flex; gap:8px; }
+.widget-slot .steps b{ font-family:var(--sans, inherit); }
+.insta-embed-wrap{ min-height: 1px; }
+
 /* ---------- Page hero (sub pages) ---------- */
 .page-hero{
   padding: 70px 0 46px;

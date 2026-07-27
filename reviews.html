@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>객실안내 | 펫스테이1455</title>
-<meta name="description" content="펫스테이1455의 객실안내. 5개동 모두 비슷한 구조로 지어진 독채형 애견동반 펜션입니다.">
+<title>이용후기 | 펫스테이1455</title>
+<meta name="description" content="펫스테이1455에 다녀가신 분들이 인스타그램에 태그해주신 사진과 후기를 모아봤습니다.">
 <link rel="icon" href="images/logo.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,11 +15,11 @@
     <a href="index.html" class="brand"><img src="images/logo.png" alt="펫스테이1455"></a>
     <nav class="gnb" id="gnb">
       <a href="about.html">ABOUT</a>
-      <a href="rooms.html" aria-current="page">ROOM</a>
+      <a href="rooms.html">ROOM</a>
       <a href="facilities.html">FACILITIES</a>
       <a href="pet-guide.html">PET GUIDE</a>
       <a href="reservation.html">RESERVATION</a>
-      <a href="reviews.html">REVIEWS</a>
+      <a href="reviews.html" aria-current="page">REVIEWS</a>
     </nav>
     <div class="header-cta">
       <a class="btn btn-outline" href="reservation.html">요금안내</a>
@@ -32,29 +32,35 @@
 <main>
   <section class="page-hero">
     <div class="wrap">
-      <div class="breadcrumb"><a href="index.html">HOME</a> / ROOM</div>
-      <div class="eyebrow">Room</div>
-      <h1>객실안내</h1>
-      <p>펫스테이1455는 총 5개동으로 이루어져 있으며, 내부 구조는 모두 비슷합니다.</p>
+      <div class="breadcrumb"><a href="index.html">HOME</a> / REVIEWS</div>
+      <div class="eyebrow">Reviews</div>
+      <h1>이용후기</h1>
+      <p>펫스테이1455에 다녀가신 분들이 인스타그램에 <b>@[인스타그램 계정 아이디 입력]</b>을 태그해주신 사진들을 모아봤습니다.</p>
     </div>
   </section>
 
-  <!-- 공통 객실 소개 -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head" data-reveal>
-        <div class="eyebrow">Common Interior</div>
-        <h2>5개동 모두, 비슷한 구조입니다</h2>
-        <p>침실·거실·주방·다락 라운지 구성은 5개동 모두 비슷합니다. 어느 동에 머무르셔도 편안하게 지내실 수 있습니다.</p>
+      <!--
+        SnapWidget 연동 방법
+        1) snapwidget.com 가입 후 Instagram 계정 연결 (비즈니스/크리에이터 계정 권장)
+        2) "Tagged Photos" 또는 "Hashtag" 위젯 생성
+        3) 발급된 <iframe class="snapwidget-widget" src="https://snapwidget.com/embed/XXXXXX" ...></iframe>
+           코드를 아래 .widget-slot 블록을 통째로 교체해서 붙여넣기
+      -->
+      <div class="widget-slot" data-reveal>
+        <span class="icon">📷</span>
+        <b>여기에 인스타그램 태그 사진 위젯이 표시됩니다</b>
+        <p style="margin:10px 0 0;">아직 위젯이 연결되지 않았습니다. SnapWidget 등에서 계정을 연결한 뒤, 발급받은 embed 코드를 이 자리에 붙여넣어 주세요.</p>
+        <ul class="steps">
+          <li>1. snapwidget.com 가입 → Instagram 계정 연결</li>
+          <li>2. &ldquo;Tagged Photos&rdquo; 위젯 만들기</li>
+          <li>3. 발급된 &lt;iframe&gt; 코드를 이 영역에 붙여넣기</li>
+        </ul>
       </div>
-      <div class="card-grid cols-3" data-reveal>
-        <div class="ph wide"><img src="images/room-bedroom.jpg" alt="침실" onerror="this.style.display='none'"></div>
-        <div class="ph wide"><img src="images/room-living-1.jpg" alt="거실 전경" onerror="this.style.display='none'"></div>
-        <div class="ph wide"><img src="images/room-living-2.jpg" alt="거실 및 주방" onerror="this.style.display='none'"></div>
-        <div class="ph wide"><img src="images/room-loft.jpg" alt="다락 라운지" onerror="this.style.display='none'"></div>
-        <div class="ph wide"><img src="images/room-loft-2.jpg" alt="다락 라운지 2" onerror="this.style.display='none'"></div>
-        <div class="ph wide"><img src="images/room-sofa.jpg" alt="거실 소파" onerror="this.style.display='none'"></div>
-      </div>
+      <!-- <div class="insta-embed-wrap">
+        <iframe class="snapwidget-widget" src="https://snapwidget.com/embed/XXXXXX" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+      </div> -->
     </div>
   </section>
 
@@ -62,10 +68,10 @@
     <div class="wrap">
       <div class="cta-band" data-reveal>
         <div>
-          <h3>지금 예약해보세요</h3>
-          <p>네이버예약을 통해 실시간으로 빈 객실을 확인하고 바로 예약할 수 있습니다.</p>
+          <h3>우리 아이 사진도 함께 태그해보세요</h3>
+          <p>인스타그램에 <b>@[인스타그램 계정 아이디 입력]</b>을 태그하시면 이 페이지에 사진이 소개될 수 있어요.</p>
         </div>
-        <a class="btn btn-primary btn-lg" href="https://booking.naver.com/booking/3/bizes/1223844" target="_blank" rel="noopener">실시간예약</a>
+        <a class="btn btn-primary btn-lg" href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램 바로가기</a>
       </div>
     </div>
   </section>
