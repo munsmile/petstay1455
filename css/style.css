@@ -267,6 +267,11 @@ button{ font-family:inherit; }
   width: 62%; position:absolute; right:0; bottom:-40px;
   box-shadow: var(--shadow-strong); border: 6px solid var(--paper);
 }
+/* 3-photo variant (hero shot on top, two accent shots below) */
+.intro-photos.triptych{ display:flex; flex-direction:column; gap:16px; }
+.intro-photos.triptych .ph{ position:static; width:100%; box-shadow:none; border:none; }
+.intro-photos.triptych .photo-duo{ display:flex; gap:16px; }
+.intro-photos.triptych .photo-duo .ph{ flex:1; }
 .intro-text h3{ font-size: 26px; margin-bottom: 18px; }
 .intro-text p{ color: var(--ink-soft); font-size: 15.5px; margin: 0 0 14px; }
 @media (max-width: 880px){
