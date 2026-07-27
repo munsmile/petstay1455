@@ -338,7 +338,8 @@ button{ font-family:inherit; }
   overflow: hidden;
   background: var(--stone);
 }
-.map-embed iframe{
+.map-embed iframe,
+.map-embed .map-canvas{
   width: 100%;
   height: 320px;
   border: 0;

@@ -65,4 +65,22 @@ document.addEventListener("DOMContentLoaded", function () {
       counterEl.classList.toggle("visible");
     });
   }
+
+  // 네이버 지도 (오시는 길)
+  var mapEl = document.getElementById("naverMap");
+  if (mapEl) {
+    if (window.naver && window.naver.maps) {
+      var location = new naver.maps.LatLng(35.8192258, 129.1733416);
+      var map = new naver.maps.Map(mapEl, {
+        center: location,
+        zoom: 15
+      });
+      new naver.maps.Marker({
+        position: location,
+        map: map
+      });
+    } else {
+      mapEl.textContent = "지도를 불러올 수 없습니다.";
+    }
+  }
 });
