@@ -83,4 +83,78 @@ document.addEventListener("DOMContentLoaded", function () {
       mapEl.textContent = "지도를 불러올 수 없습니다.";
     }
   }
+
+  // 예약 특가 팝업
+  var promoPopup = document.getElementById("promoPopup");
+  if (promoPopup) {
+    var PROMO_DISMISS_KEY = "petstay1455_promo_dismissed_until";
+    var dismissedUntil = Number(localStorage.getItem(PROMO_DISMISS_KEY) || 0);
+
+    function openPromo() {
+      promoPopup.classList.add("is-open");
+      promoPopup.setAttribute("aria-hidden", "false");
+    }
+    function closePromo() {
+      promoPopup.classList.remove("is-open");
+      promoPopup.setAttribute("aria-hidden", "true");
+    }
+
+    if (Date.now() > dismissedUntil) {
+      setTimeout(openPromo, 400);
+    }
+
+    promoPopup.querySelectorAll("[data-promo-close]").forEach(function (el) {
+      el.addEventListener("click", closePromo);
+    });
+
+    var dismissBtn = document.getElementById("promoDismissBtn");
+    if (dismissBtn) {
+      dismissBtn.addEventListener("click", function () {
+        var oneDay = 24 * 60 * 60 * 1000;
+        localStorage.setItem(PROMO_DISMISS_KEY, String(Date.now() + oneDay));
+        closePromo();
+      });
+    }
+
+    var copyBtn = document.getElementById("promoCopyBtn");
+    if (copyBtn) {
+      var phoneNumber = "010-6645-1455";
+      var originalLabel = copyBtn.textContent;
+
+      var resetLabel = function () {
+        copyBtn.textContent = originalLabel;
+        copyBtn.classList.remove("copied");
+      };
+      var showCopied = function () {
+        copyBtn.textContent = "복사완료!";
+        copyBtn.classList.add("copied");
+        setTimeout(resetLabel, 1600);
+      };
+      var fallbackCopy = function () {
+        var temp = document.createElement("textarea");
+        temp.value = phoneNumber;
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.focus();
+        temp.select();
+        try {
+          document.execCommand("copy");
+          showCopied();
+        } catch (e) {
+          copyBtn.textContent = "복사 실패";
+          setTimeout(resetLabel, 1600);
+        }
+        document.body.removeChild(temp);
+      };
+
+      copyBtn.addEventListener("click", function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(phoneNumber).then(showCopied).catch(fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+      });
+    }
+  }
 });

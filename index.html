@@ -10,6 +10,22 @@
 </head>
 <body>
 
+<div class="promo-popup" id="promoPopup" aria-hidden="true">
+  <button type="button" class="promo-backdrop" data-promo-close aria-label="팝업 닫기"></button>
+  <div class="promo-card" role="dialog" aria-modal="true" aria-label="예약 특가 이벤트">
+    <button type="button" class="promo-close" data-promo-close aria-label="닫기">&times;</button>
+    <img src="images/popup-promo.jpg" alt="문자 예약 시 20% 할인 이벤트" class="promo-image">
+    <div class="promo-action">
+      <div class="promo-phone">
+        <span class="promo-phone-label">문자 예약 문의</span>
+        <span class="promo-phone-number">010-6645-1455</span>
+      </div>
+      <button type="button" class="promo-copy-btn" id="promoCopyBtn">복사하기</button>
+    </div>
+    <button type="button" class="promo-dismiss" id="promoDismissBtn">오늘 하루 보지 않기</button>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">

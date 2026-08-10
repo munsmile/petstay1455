@@ -441,6 +441,98 @@ button{ font-family:inherit; }
 .widget-slot .steps b{ font-family:var(--sans, inherit); }
 .insta-embed-wrap{ min-height: 1px; }
 
+/* ---------- Promo popup ---------- */
+.promo-popup{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s ease;
+}
+.promo-popup.is-open{ opacity: 1; visibility: visible; }
+.promo-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(30,25,20,0.55);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.promo-card{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  background: var(--paper);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,0.5);
+  transform: translateY(14px) scale(0.98);
+  transition: transform .25s ease;
+}
+.promo-popup.is-open .promo-card{ transform: translateY(0) scale(1); }
+.promo-close{
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(46,39,33,0.5);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+}
+.promo-image{ width: 100%; display: block; }
+.promo-action{
+  background: var(--pine);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.promo-phone{ display: flex; flex-direction: column; gap: 2px; text-align: left; }
+.promo-phone-label{ font-size: 11px; color: rgba(255,253,250,0.72); font-weight: 600; letter-spacing: 0.04em; }
+.promo-phone-number{ font-size: 19px; font-weight: 800; color: #fffdfa; letter-spacing: 0.02em; }
+.promo-copy-btn{
+  flex-shrink: 0;
+  background: var(--paper);
+  color: var(--pine);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.promo-copy-btn:hover{ background: #fff; }
+.promo-copy-btn.copied{ background: var(--terracotta); color: #fff; }
+.promo-dismiss{
+  display: block;
+  width: 100%;
+  padding: 13px;
+  background: var(--paper);
+  border: none;
+  border-top: 1px solid var(--stone-line);
+  font-size: 13px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-weight: 600;
+}
+.promo-dismiss:hover{ color: var(--ink); }
+@media (max-width: 420px){
+  .promo-phone-number{ font-size: 17px; }
+}
+
 /* ---------- Page hero (sub pages) ---------- */
 .page-hero{
   padding: 70px 0 46px;
