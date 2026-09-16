@@ -222,7 +222,7 @@ button{ font-family:inherit; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(18,15,12,0.32) 0%, rgba(18,15,12,0.48) 45%, rgba(18,15,12,0.62) 100%);
+  background: linear-gradient(180deg, rgba(18,15,12,0.22) 0%, rgba(18,15,12,0.36) 45%, rgba(18,15,12,0.5) 100%);
   z-index: 0;
 }
 .hero-inner{ position:relative; z-index:1; }
